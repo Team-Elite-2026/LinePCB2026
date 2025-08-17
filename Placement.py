@@ -37,12 +37,15 @@ def place_circle(refdes):
     len_refdes = len(refdes)
     circles = []
     circles_sorted=[]
+    lowest=0
     for d in pcb.GetDrawings():
       if d.GetLayerName() == 'Edge.Cuts' and d.GetShape() == 3:
         circles.append(d)
     len_circles = len(circles)
     for i in range(min(len_refdes, len_circles)):
-       print(circles[i].getCenter())
+       for j in range(i, min(len_refdes, len_circles)):
+        if math.atan2(circles[i].GetCenter()[0]-3937.01, circles[i].GetCenter()[1]-3937.01)*180/math.pi > math.atan2(circles[j].GetCenter()[0]-3937.01, circles[j].GetCenter()[1]-3937.01)*180/math.pi:
+           circles[i], circles[j] = circles[j], circles[i]
     for i in range(min(len_refdes, len_circles)):
       part = pcb.FindFootprintByReference(refdes[i])
       center = circles[i].GetCenter()
@@ -51,19 +54,31 @@ def place_circle(refdes):
     pcbnew.Refresh()          
     print("Placement finished.")
 
-
 def testing(refdes):
+    """
+    Places components in a circle
+    refdes: List of component references
+    start_angle: Starting angle
+    center: Tuple of (x, y) mils of circle center
+    radius: Radius of the circle in mils
+    component_offset: Offset in degrees for each component to add to angle
+    hide_ref: Hides the reference if true, leaves it be if None
+    lock: Locks the footprint if true
+    """
+
     pcb = pcbnew.GetBoard()
     len_refdes = len(refdes)
     circles = []
     circles_sorted=[]
-    
     for d in pcb.GetDrawings():
       if d.GetLayerName() == 'Edge.Cuts' and d.GetShape() == 3:
         circles.append(d)
     len_circles = len(circles)
-    shortest=circles[0]
-    shortest_length=0
-    sortedList=[circles[0]]
     for i in range(min(len_refdes, len_circles)):
-       if dist(shortest.GetCenter(), circles[i])
+       for j in range(i, min(len_refdes, len_circles)):
+        if math.atan2(circles[i].GetCenter()[0]-3937.01, circles[i].GetCenter()[1]-3937.01)*180/math.pi > math.atan2(circles[j].GetCenter()[0]-3937.01, circles[j].GetCenter()[1]-3937.01)*180/math.pi:
+           circles[i], circles[j] = circles[j], circles[i]
+    for i in circles:
+       print(math.atan2(i.GetCenter()[0]-3937.01, i.GetCenter()[1]-3937.01)*180/math.pi)
+    return circles_sorted
+
