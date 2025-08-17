@@ -44,7 +44,7 @@ def place_circle(refdes):
     len_circles = len(circles)
     for i in range(min(len_refdes, len_circles)):
        for j in range(i, min(len_refdes, len_circles)):
-        if math.atan2(circles[i].GetCenter()[0]-3937.01, circles[i].GetCenter()[1]-3937.01)*180/math.pi > math.atan2(circles[j].GetCenter()[0]-3937.01, circles[j].GetCenter()[1]-3937.01)*180/math.pi:
+        if math.atan2(circles[i].GetCenter()[0]-100000000, circles[i].GetCenter()[1]-100000000)*180/math.pi > math.atan2(circles[j].GetCenter()[0]-100000000, circles[j].GetCenter()[1]-100000000)*180/math.pi:
            circles[i], circles[j] = circles[j], circles[i]
     for i in range(min(len_refdes, len_circles)):
       part = pcb.FindFootprintByReference(refdes[i])
@@ -76,9 +76,9 @@ def testing(refdes):
     len_circles = len(circles)
     for i in range(min(len_refdes, len_circles)):
        for j in range(i, min(len_refdes, len_circles)):
-        if math.atan2(circles[i].GetCenter()[0]-3937.01, circles[i].GetCenter()[1]-3937.01)*180/math.pi > math.atan2(circles[j].GetCenter()[0]-3937.01, circles[j].GetCenter()[1]-3937.01)*180/math.pi:
+        if math.atan2(circles[i].GetCenter()[0]-100000000, circles[i].GetCenter()[1]-100000000)*180/math.pi > math.atan2(circles[j].GetCenter()[0]-100000000, circles[j].GetCenter()[1]-100000000)*180/math.pi:
            circles[i], circles[j] = circles[j], circles[i]
     for i in circles:
-       print(math.atan2(i.GetCenter()[0]-3937.01, i.GetCenter()[1]-3937.01)*180/math.pi)
+       print(math.atan2(i.GetCenter()[0]-100000000, i.GetCenter()[1]-100000000)*180/math.pi)
     return circles_sorted
 
