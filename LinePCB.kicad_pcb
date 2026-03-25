@@ -72786,14 +72786,6 @@
 		(uuid "2cce4d52-6952-4b4c-a77a-f7b167222cea")
 	)
 	(segment
-		(start 41.0743 100.2557)
-		(end 39.73 101.6)
-		(width 0.2)
-		(layer "In1.Cu")
-		(net 5)
-		(uuid "318ad1ca-88a0-4958-971e-19e3ec89736f")
-	)
-	(segment
 		(start 159.5647 59.6953)
 		(end 159.5646 59.6953)
 		(width 0.2)
@@ -72954,14 +72946,6 @@
 		(uuid "aecad814-d0a1-4b9a-a69f-d6011934f561")
 	)
 	(segment
-		(start 41.0743 91.288)
-		(end 41.0743 100.2557)
-		(width 0.2)
-		(layer "In1.Cu")
-		(net 5)
-		(uuid "b60e8d29-1afe-4810-b46c-94e24b770ffd")
-	)
-	(segment
 		(start 142.921757 174.55)
 		(end 144.75 174.55)
 		(width 0.2)
@@ -72976,14 +72960,6 @@
 		(layer "In1.Cu")
 		(net 5)
 		(uuid "bccb94f0-33a5-42f4-a68f-feb6a926207e")
-	)
-	(segment
-		(start 42.226 91.288)
-		(end 41.0743 91.288)
-		(width 0.2)
-		(layer "In1.Cu")
-		(net 5)
-		(uuid "bd0c54ea-5cc0-4afb-8a37-5073b1a8c5d1")
 	)
 	(segment
 		(start 53.2 37.9)
@@ -73274,22 +73250,6 @@
 		(uuid "57806197-bb72-4b2e-bf92-f829d985ae7f")
 	)
 	(segment
-		(start 42.226 91.288)
-		(end 41.0743 91.288)
-		(width 0.2)
-		(layer "In2.Cu")
-		(net 5)
-		(uuid "5b59508e-306a-4833-aff9-f5726c9d3597")
-	)
-	(segment
-		(start 41.0743 91.7199)
-		(end 37.8202 94.974)
-		(width 0.2)
-		(layer "In2.Cu")
-		(net 5)
-		(uuid "605706cb-f81b-46ad-b840-26c7e2f13082")
-	)
-	(segment
 		(start 31.2406 104.0275)
 		(end 37.3025 104.0275)
 		(width 0.2)
@@ -73538,14 +73498,6 @@
 		(uuid "cd5a2fc0-5fc9-4ad2-a518-038d5c970f0a")
 	)
 	(segment
-		(start 37.8202 94.974)
-		(end 16.0232 94.974)
-		(width 0.2)
-		(layer "In2.Cu")
-		(net 5)
-		(uuid "d3f90d1f-e480-4550-bd8b-1a004c1884b8")
-	)
-	(segment
 		(start 25.491697 122.407384)
 		(end 25.491697 123.54017)
 		(width 0.2)
@@ -73584,14 +73536,6 @@
 		(layer "In2.Cu")
 		(net 5)
 		(uuid "f1887a25-20ff-4387-a745-bb68526f1397")
-	)
-	(segment
-		(start 41.0743 91.288)
-		(end 41.0743 91.7199)
-		(width 0.2)
-		(layer "In2.Cu")
-		(net 5)
-		(uuid "f5b68ecc-beaf-498c-b47f-5b99fd48d2da")
 	)
 	(segment
 		(start 39.367822 142.178375)
